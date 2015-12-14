@@ -24,39 +24,46 @@
 
     <body>
         <div class="page-wrapper" itemprop="location" itemscope itemtype="http://schema.org/Place">
-          <section class="header-9-sub bg-midnight-blue">
+          <section class="header-9-sub bg-midnight-blue style-white">
               <div class="background">&nbsp;</div>
               <div class="container">
                   <div class="row">
                       <div class="col-sm-6 col-sm-offset-3">
                           <div class="hero-unit">
-                              <img src="static/img/logo_white.png" class="logo" alt="to be">
+                              <img src="static/img/logo_white.png" class="logo logo__white" alt="to be">
+                              <img src="static/img/logo.png" class="logo hidden logo__black" alt="to be">
                               <p class="wide-text">Открыты с 12:00 до 2:00, в Пт. и Сб. до 04:00</p>
                           </div>
                       </div>
                   </div>
                   <div class="nav-steps">
-                      <a href="tel:+380442228944" class="active">
-                        Тел.: <span itemprop=”telephone”>+380 (44) 222 89 44</span>
-                      </a>
+                      <span class="link-block">
+                        <a href="tel:+380442228944" class="active">
+                          Тел.: <span itemprop=”telephone”>+380 (44) 222 89 44</span>
+                        </a>
+                      </span>
                       <div class="steps-selectors">
                           <a href="#">/</a>
                           <a href="#">/</a>
                       </div>
-                      <a href="https://goo.gl/maps/R8mqRKVJJ262" class="active" itemprop=”address” itemscope itemtype=”http://schema.org/PostalAddress”>
-                        <span itemprop=”addressLocality”>г. Киев,</span>
-                        <span itemprop=”streetAddress”>Верхний Вал, 2а</span>
-                      </a>
+                      <span class="link-block">
+                        <a href="https://goo.gl/maps/R8mqRKVJJ262" class="active" itemprop=”address” itemscope itemtype=”http://schema.org/PostalAddress”>
+                          <span itemprop=”addressLocality”>г. Киев,</span>
+                          <span itemprop=”streetAddress”>Верхний Вал, 2а</span>
+                        </a>
+                      </span>
                       <div class="steps-selectors">
                           <a href="#">/</a>
                           <a href="#">/</a>
                       </div>
-                       <a class="active social-icon" href="https://www.facebook.com/ToBeRest">
-                        <span class="fa fa-facebook-official"> </span>
-                      </a>
-                      <a class="active social-icon" href="http://instagram.com/tobe_ua/">
-                        <span class="fa fa-instagram"> </span>
-                      </a>
+                      <span class="link-block">
+                        <a class="active social-icon" href="https://www.facebook.com/ToBeRest">
+                          <span class="fa fa-facebook-official"> </span>
+                        </a>
+                        <a class="active social-icon" href="http://instagram.com/tobe_ua/">
+                          <span class="fa fa-instagram"> </span>
+                        </a>
+                      </span>
                   </div>
               </div>
               <div class="shemedata">
@@ -83,6 +90,25 @@
           <script src="startup/common-files/js/jquery.backgroundvideo.min.js"></script>
           <script src="startup/common-files/js/froogaloop.min.js"></script>
           <script src="startup/common-files/js/startup-kit.js"></script>
+          <script type="text/javascript">
+            $(function() {
+              var min_count = 1;
+              var max_count = 4;
+              var current_count = min_count;
+              setInterval(function() {
+                // This will be managed from css
+                // $('.logo__black').removeClass('hidden');
+
+                $('.page-wrapper').removeClass('background__' + current_count);
+                current_count++;
+                if(current_count > max_count) {
+                  current_count = min_count;
+                }
+
+                $('.page-wrapper').addClass('background__' + current_count);
+              }, 5000);
+            });
+          </script>
         </div>
     </body>
 </html>

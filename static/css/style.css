@@ -1087,3 +1087,80 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   padding-right: 10px;
   font-size: 16px;
 }
+
+.background {
+  -webkit-transition: background 0.5s linear;
+  -moz-transition: background 0.5s linear;
+  -o-transition: background 0.5s linear;
+  transition: background 0.5s linear;
+}
+
+.background__1 .header-9-sub .background  {
+  background-image: url('../img/backgrounds/1.jpg');
+}
+
+/*.background__1 .logo__black {
+  display: none;
+}
+
+.background__1 .logo__white {
+  display: inline-block;
+}*/
+
+.background__2 .header-9-sub .background {
+  background-image: url('../img/backgrounds/2.jpg');
+}
+
+/*.background__2 .logo__black {
+  display: none;
+}
+
+.background__2 .logo__white {
+  display: inline-block;
+}*/
+
+.background__3 .header-9-sub .background {
+  background-image: url('../img/backgrounds/3.jpg');
+}
+
+/*.background__3 .logo__black {
+  display: inline-block;
+}
+
+.background__3 .logo__white {
+  display: none;
+}*/
+
+.background__4 .header-9-sub .background {
+  background-image: url('../img/backgrounds/4.jpg');
+}
+
+/*.background__4 .logo__black {
+  display: inline-block;
+}
+
+.background__4 .logo__white {
+  display: none;
+}
+
+.background__1 .wide-text,
+.background__2 .wide-text {
+  color: #ffffff;
+}
+
+.background__3 .wide-text,
+.background__4 .wide-text {
+  color: #000000;
+}
+*/
+
+@media (max-width: 480px) {
+  .header-9-sub .nav-steps .steps-selectors {
+    display: none;
+  }
+
+  .header-9-sub .nav-steps .link-block,
+  .header-9-sub .nav-steps .link-block {
+    display: block;
+  }
+}
