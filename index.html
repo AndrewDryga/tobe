@@ -95,6 +95,20 @@
               var min_count = 1;
               var max_count = 4;
               var current_count = min_count;
+
+              function preload(arrayOfImages) {
+                $(arrayOfImages).each(function(){
+                  $('<img/>')[0].src = this;
+                });
+              }
+
+              // Preload images
+              preload([
+                  '/static/img/backgrounds/2.jpg',
+                  '/static/img/backgrounds/3.jpg',
+                  '/static/img/backgrounds/4.jpg'
+              ]);
+
               setInterval(function() {
                 // This will be managed from css
                 // $('.logo__black').removeClass('hidden');
